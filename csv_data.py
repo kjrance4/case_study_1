@@ -1,12 +1,9 @@
 import pandas as pd
 
-# Define the path to the CSV file containing loan details
-csv_path = 'data/Enhanced Loan-Level Data/LoanDetailCMLT06AMC10710.csv'
-
-df = pd.read_csv(csv_path)
-
 # Define a function to extract data from csv
-def extract_csv_data(data_frame):
+def extract_csv_data(csv_path):
+
+    df = pd.read_csv(csv_path)
     # Define the columns to extract
     columns_to_extract = ['Scheduled Principal', 'Curtailments',
                           'Curtailment Adjustments', 'Prepayment',
@@ -26,8 +23,4 @@ def extract_csv_data(data_frame):
     result = round(total - (2 * total_losses), 2)
 
     return result
-
-
-# Call the extract_csv_data function
-total_funds_csv = extract_csv_data(df)
 

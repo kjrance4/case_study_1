@@ -1,8 +1,5 @@
 import PyPDF2
 
-# Define the path to the PDF file (Certificate Holders Statement)
-pdf_path = 'data/Certificate Holders Statement/CertStmtCMLT06AMC10710.pdf'
-
 # Define a function to extract data from the PDF
 def get_pdf_data(pdf_path):
     pdf_file = open(pdf_path, 'rb')
@@ -54,6 +51,3 @@ def get_pdf_data(pdf_path):
     values = list(items.values())[0]
     return values['Total Principal Funds Available:']
 
-
-# Call the function to get the total principal funds available from the PDF
-total_funds_pdf = get_pdf_data(pdf_path)
