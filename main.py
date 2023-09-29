@@ -1,4 +1,3 @@
-import pdf_data
 from pdf_data import get_pdf_data
 from csv_data import extract_csv_data
 
